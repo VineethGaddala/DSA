@@ -13,36 +13,36 @@ for ( let i = 1; i<=n; i++ ){
 }
 
 
-// Y pattern
-let prompt = require("prompt-sync")();
-let n = Number(prompt("Enter a number:"));
-let breakpoint = (n%2 !== 0)? Math.floor(n/2 + 1): n/2 
-for ( let i = 1; i<= n; i++ ){ 
-    if (i <= breakpoint) {
-      for (let j = 1; j <= n; j++) {
-        if (i === j || i + j === n + 1) {
-          process.stdout.write("* ");
-        } else {
-          process.stdout.write("  ");
-        }
-      }
-      console.log(); // empty line
-    } else {
-      for (let j = 1; j <= n; j++) {
-        if(n/2 !== breakpoint){ // odd number of rows
-            if(j === breakpoint){
-                process.stdout.write("* ");
-            } else{
-                process.stdout.write("  ")
-            }
-        } else { // even number of rows
-            if(j === breakpoint || j === breakpoint+1){
-                process.stdout.write("* ");
-            } else{
-                process.stdout.write("  ")
-            }
-        }
-      }
-      console.log(); // empty line
-    }
-}
+// // Y pattern
+// let prompt = require("prompt-sync")();
+// let n = Number(prompt("Enter a number:"));
+// let breakpoint = (n%2 !== 0)? Math.floor(n/2 + 1): n/2 
+// for ( let i = 1; i<= n; i++ ){ 
+//     if (i <= breakpoint) {
+//       for (let j = 1; j <= n; j++) {
+//         if (i === j || i + j === n + 1) {
+//           process.stdout.write("* ");
+//         } else {
+//           process.stdout.write("  ");
+//         }
+//       }
+//       console.log(); // empty line
+//     } else {
+//       for (let j = 1; j <= n; j++) {
+//         if(n/2 !== breakpoint){ // odd number of rows
+//             if(j === breakpoint){
+//                 process.stdout.write("* ");
+//             } else{
+//                 process.stdout.write("  ")
+//             }
+//         } else { // even number of rows
+//             if(j === breakpoint || j === breakpoint+1){
+//                 process.stdout.write("* ");
+//             } else{
+//                 process.stdout.write("  ")
+//             }
+//         }
+//       }
+//       console.log(); // empty line
+//     }
+// }
